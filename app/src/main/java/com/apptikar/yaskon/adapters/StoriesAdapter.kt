@@ -7,7 +7,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.apptikar.yaskon.R
-import com.apptikar.yaskon.pojos.City
 import com.apptikar.yaskon.pojos.StoryHome
 import java.util.ArrayList
 
@@ -23,7 +22,7 @@ class StoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     class StoriesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
         var  storyNameTextView : TextView = itemView.findViewById(R.id.storyName)
-        var  storyImage : ImageView = itemView.findViewById(R.id.story_image)
+        var  storyImage : ImageView = itemView.findViewById(R.id.profile_image_comment)
     }
 
     class AddStoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)

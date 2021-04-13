@@ -12,17 +12,13 @@ class SpacesItemDecoration(private val space: Int) : ItemDecoration() {
 override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
     if(parent.getChildLayoutPosition(view) >=1)
     {
-        Log.d("abdo",parent.getChildLayoutPosition(view).toString())
         outRect.left = space
-        outRect.top = space
+        outRect.top = space*10
         outRect.right = space
     }else
     {
 
-        outRect.top = space
+        outRect.top = space*10
         outRect.right = space
-    }
-
-
-    }
+    }}
 }

@@ -12,9 +12,9 @@
         android:text="cresu"
         android:textAlignment="center"
         android:textSize="@dimen/_12ssp"
-        app:layout_constraintEnd_toEndOf="@+id/story_image"
-        app:layout_constraintStart_toStartOf="@+id/story_image"
-        app:layout_constraintTop_toBottomOf="@+id/story_image" />
+        app:layout_constraintEnd_toEndOf="@+id/profile_image_comment"
+        app:layout_constraintStart_toStartOf="@+id/profile_image_comment"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image_comment" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImageView"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/story_image"
+        android:id="@+id/profile_image_comment"
         android:layout_width="@dimen/_52sdp"
         android:layout_height="@dimen/_52sdp"
         android:layout_marginTop="5dp"

@@ -8,12 +8,12 @@ import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
 
-class ViewPagerAdapter(var context: Context,var  bitmap: Bitmap) : PagerAdapter() {
+class ViewPagerAdapter(var context: Context, var bitmap: MutableList<Bitmap>) : PagerAdapter() {
 
 
 
     override fun getCount(): Int {
-        TODO("Not yet implemented")
+        return bitmap.size
     }
 
 
@@ -23,7 +23,7 @@ class ViewPagerAdapter(var context: Context,var  bitmap: Bitmap) : PagerAdapter(
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
        val image  = ImageView(context)
-       Glide.with(context).load(bitmap).into(image)
+       Glide.with(context).load(bitmap[position]).centerCrop().into(image)
         container.addView(image)
         return image
     }
@@ -31,4 +31,6 @@ class ViewPagerAdapter(var context: Context,var  bitmap: Bitmap) : PagerAdapter(
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
         container.removeView(`object` as View)
     }
+
+
 }

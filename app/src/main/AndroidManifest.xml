@@ -9,24 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Yaskon">
-        <activity android:name=".Home"
-
-            >
+        <activity android:name=".Comments">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".VisitCities">
-
+        <activity android:name=".Listing">
         </activity>
+        <activity
+            android:name=".PropertyActivity"
+            android:theme="@style/Theme.Yaskon"></activity>
+        <activity
+            android:name=".Home"
+            android:theme="@style/Theme.home" />
+        <activity android:name=".VisitCities" />
         <activity
             android:name=".Splash"
             android:theme="@style/splashScreenTheme" />
+        <activity android:name=".Profile" />
         <activity
             android:name=".SignUp"
-            android:windowSoftInputMode="adjustNothing"></activity>
+            android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name=".Login.LoginActivity"
             android:windowSoftInputMode="adjustNothing" />

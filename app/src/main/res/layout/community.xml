@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image_comment"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/cresu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/commentNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/montserrat"
+        android:text="Salem Ahmed"
+        android:textColor="#242424"
+        android:textSize="@dimen/_11ssp"
+        android:textStyle="normal|bold"
+        app:layout_constraintStart_toEndOf="@+id/profile_image_comment"
+        app:layout_constraintTop_toTopOf="@+id/profile_image_comment" />
+
+    <TextView
+        android:id="@+id/customerDurationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10ssp"
+        android:fontFamily="@font/montserrat"
+        android:text="3 days"
+        android:textColor="#71717A"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/commentNameTextView"
+        app:layout_constraintStart_toEndOf="@+id/commentNameTextView"
+        app:layout_constraintTop_toTopOf="@+id/commentNameTextView" />
+
+    <TextView
+        android:id="@+id/commentPlaceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Dakahlia, Mansoura"
+        android:textColor="#71717A"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@+id/commentNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/commentNameTextView" />
+
+    <TextView
+        android:id="@+id/commentTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="I’m working as a broker for 15 years seeking happiness to all my clients"
+        android:textColor="#242424"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/profile_image_comment"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image_comment" />
+
+    <ImageView
+        android:id="@+id/commentsImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/commentTextView"
+        app:layout_constraintTop_toBottomOf="@+id/commentTextView"
+        app:srcCompat="@drawable/ic_chat" />
+
+    <TextView
+        android:id="@+id/numberOfComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text="12 Comments"
+        android:textColor="#71717A"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/commentsImageView"
+        app:layout_constraintStart_toEndOf="@+id/commentsImageView"
+        app:layout_constraintTop_toTopOf="@+id/commentsImageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
