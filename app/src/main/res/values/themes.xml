@@ -41,11 +41,13 @@
         <item name="cornerRadius">@dimen/_15sdp</item>
     </style>
     <style name="splashScreenTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/backgroundforsplash</item>
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+
     </style>
 
 
-    You have to customize the SearchView style like this:
 
     <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
         <!-- Search button icon -->
@@ -60,4 +62,12 @@
         <item name="cornerSizeBottomRight">200dp</item>
         <item name="cornerSizeBottomLeft">0dp</item>
     </style>
+
+
+    <style name="themeView">
+        <item name="colorPrimary">@color/orange_500</item>
+        <item name="colorSecondary">@color/teal_200</item>
+    </style>
+
+
 </resources>

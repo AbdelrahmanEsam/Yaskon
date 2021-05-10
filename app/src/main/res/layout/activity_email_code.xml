@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="ViewModel"
+            type="com.apptikar.yaskon.ui.EmailCodeViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.ResetPassword">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="normal"
+                android:text="@string/type_the_code_sent_to_your_email"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/code1"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:paddingBottom="0dp"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toStartOf="@+id/continueButton"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat"
+                    android:maxLength="1"
+                    android:inputType="number"
+
+                    android:text="@={ViewModel.code1}"
+                    android:textAlignment="center"
+                    android:textColor="#242424"
+                    android:textColorHint="#A8A8A8"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="normal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/code2"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:paddingBottom="0dp"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toEndOf="@+id/code1"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@={ViewModel.code2}"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="#242424"
+                    android:textColorHint="#A8A8A8"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="normal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/code3"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:paddingBottom="0dp"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toEndOf="@+id/code2"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:text="@={ViewModel.code3}"
+                    android:textAlignment="center"
+                    android:textColor="#242424"
+                    android:textColorHint="#A8A8A8"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="normal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/code4"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:paddingBottom="0dp"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                app:layout_constraintStart_toEndOf="@+id/code3"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/montserrat"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="@={ViewModel.code4}"
+                    android:textAlignment="center"
+                    android:textColor="#242424"
+                    android:textColorHint="#A8A8A8"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="normal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/continueButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/background_orange"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="@string/verify_code"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/code1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

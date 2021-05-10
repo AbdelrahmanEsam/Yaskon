@@ -13,12 +13,12 @@ override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, sta
     if(parent.getChildLayoutPosition(view) >=1)
     {
         outRect.left = space
-        outRect.top = space*10
+        outRect.top = space
         outRect.right = space
     }else
     {
 
-        outRect.top = space*10
+        outRect.top = space
         outRect.right = space
     }}
 }

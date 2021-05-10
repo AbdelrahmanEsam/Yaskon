@@ -17,6 +17,10 @@
     <string name="highly_recommended">Highly Recommended</string>
     <string name="vensia">vensia</string>
     <string name="you">you</string>
+    <string-array name="slider">
+        <item>400</item>
+        <item>700</item>
+    </string-array>
 
     <string-array name="country">
         <item>+93</item>
@@ -226,7 +230,6 @@
         <item>+260</item>
         <item>+263</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="listing">Listing</string>
     <string name="view_all">View All</string>
@@ -239,4 +242,55 @@
     <string name="select_cities_you_would_like_to_visit">Select cities you would like to visit</string>
     <string name="community">Community</string>
     <string name="type_a_comment">Type a comment</string>
+    <string name="idToken">593843555017-1i2btem8grock3nmgm119l2up5mmo704.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">756426388594304</string>
+    <string name="fb_login_protocol_scheme">fb756426388594304</string>
+    <string name="filter_results">Filter Results</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="continue_string">Continue</string>
+    <string name="verify_code">Verify Code</string>
+    <string name="type_the_code_sent_to_your_email">Type the code sent to your email</string>
+    <string name="your_budget">Your budget</string>
+    <string name="finish">Finish</string>
+    <string name="back">Back</string>
+    <string name="_1_2">1/2</string>
+    <string name="night">/ night</string>
+    <string name="view_profile">View Profile</string>
+    <string name="deep_search">Deep search</string>
+    <string name="rent">Rent</string>
+    <string name="buy">Buy</string>
+    <string name="property_type">Property type</string>
+    <string name="price_range">Price range</string>
+    <string name="beds">Beds</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7+</string>
+    <string name="bedrooms">Bedrooms</string>
+    <string name="_4P">4+</string>
+    <string name="bathrooms">Bathrooms</string>
+    <string name="badges">badges</string>
+    <string name="green_house">Green House</string>
+    <string name="top_10">Top 10</string>
+    <string name="verified_broker">Verified broker</string>
+    <string name="amenities">Amenities</string>
+    <string name="wifi">WIFI</string>
+    <string name="air_conditioner">Air conditioner</string>
+    <string name="elevator">Elevator</string>
+    <string name="view_all_amenities">View All Amenities</string>
+    <string name="show_50_results">Show 50 Results</string>
+    <string name="clears_filters">Clears Filters</string>
+    <string name="search">Search</string>
+    <string name="view_first_three">View First Three</string>
+    <string name="account">Account</string>
+    <string name="add_listing">Add listing</string>
+    <string name="your_posts">Your posts</string>
+    <string name="settings">Settings</string>
+    <string name="faqs">FAQs</string>
+    <string name="contact_us">Contact us</string>
+    <string name="sign_out">Sign out</string>
+
 </resources>

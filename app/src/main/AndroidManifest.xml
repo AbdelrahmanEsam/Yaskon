@@ -2,38 +2,68 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.apptikar.yaskon">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".ui.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Yaskon">
-        <activity android:name=".Comments">
+
+        <activity android:name=".ui.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Listing">
+        <activity android:name=".registration.OnBoarding">
+
+        </activity>
+        <activity android:name=".ui.EmailCode" />
+        <activity android:name=".ui.ResetPassword" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name=".ui.Comments">
+            <meta-data
+                android:name="com.google.android.gms.games.APP_ID"
+                android:value="@string/idToken" />
         </activity>
         <activity
-            android:name=".PropertyActivity"
-            android:theme="@style/Theme.Yaskon"></activity>
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
         <activity
-            android:name=".Home"
-            android:theme="@style/Theme.home" />
-        <activity android:name=".VisitCities" />
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name=".Splash"
-            android:theme="@style/splashScreenTheme" />
-        <activity android:name=".Profile" />
+            android:name=".ui.Splash"
+            android:theme="@style/splashScreenTheme"
+            android:fitsSystemWindows="true"
+            >
+
+        </activity>
+        <activity android:name=".ui.Profile" />
         <activity
-            android:name=".SignUp"
+            android:name=".ui.SignUp"
             android:windowSoftInputMode="adjustNothing" />
         <activity
-            android:name=".Login.LoginActivity"
+            android:name=".registration.LoginActivity"
             android:windowSoftInputMode="adjustNothing" />
 
         <meta-data

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registration.BudgetRange">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/your_budget"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="normal|bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/priceRangeSlider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:trackColorActive = "@color/orange_500"
+        app:trackColorInactive = "#EDEFF2"
+        app:values="@array/slider"
+        app:thumbColor="@color/orange_500"
+        android:valueFrom="100"
+        android:valueTo="1000"
+        app:thumbStrokeWidth = "0dp"
+        app:thumbElevation="4dp"
+        app:thumbRadius="@dimen/_10sdp"
+        app:labelBehavior="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+    <TextView
+        android:id="@+id/min_price_text_budget"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="400 EGP"
+        android:textColor="#242424"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceRangeSlider" />
+
+    <TextView
+        android:id="@+id/min_per_night_budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/night"
+        android:textColor="#71717A"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/min_price_text_budget"
+        app:layout_constraintStart_toEndOf="@+id/min_price_text_budget"
+        app:layout_constraintTop_toTopOf="@+id/min_price_text_budget" />
+
+    <TextView
+        android:id="@+id/max_price_text_budget"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="400 EGP"
+        android:textColor="#242424"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/max_per_night_budget"
+        app:layout_constraintEnd_toStartOf="@+id/max_per_night_budget"
+        app:layout_constraintTop_toTopOf="@+id/max_per_night_budget" />
+
+    <TextView
+        android:id="@+id/max_per_night_budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/night"
+        android:textColor="#71717A"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/min_per_night_budget"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/min_per_night_budget" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/onBoardingContinue"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/background_orange"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/finish"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButtonBudget"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/emoji_background"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/back"
+        android:textAllCaps="false"
+        android:textColor="@color/orange_500"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="@+id/onBoardingContinue"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/onBoardingContinue" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

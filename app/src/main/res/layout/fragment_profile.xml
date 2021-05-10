@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile">
+    tools:context=".ui.Profile">
 
     <ImageButton
         android:id="@+id/WhatsUpButton"
@@ -27,7 +27,7 @@
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_8sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:background="@drawable/backgroundforhelp"
+        android:background="@drawable/background_orange"
         android:clickable="true"
         android:fontFamily="@font/montserrat"
         android:gravity="center"
@@ -78,7 +78,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".Profile">
+            tools:context=".ui.Profile">
 
 
 
@@ -153,16 +153,6 @@
                 app:layout_constraintStart_toStartOf="@+id/imageView8"
                 app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
-            <ImageView
-                android:id="@+id/verified_image_property"
-                android:layout_width="@dimen/_15sdp"
-                android:layout_height="@dimen/_15sdp"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:src="@drawable/ic_verified"
-                app:layout_constraintBottom_toBottomOf="@+id/profile_name_property"
-                app:layout_constraintStart_toEndOf="@+id/profile_name_property"
-                app:layout_constraintTop_toTopOf="@+id/profile_name_property" />
-
             <TextView
                 android:id="@+id/broker_place_property"
                 android:layout_width="wrap_content"
@@ -173,6 +163,18 @@
                 android:textSize="@dimen/_11sdp"
                 app:layout_constraintStart_toStartOf="@+id/profile_name_property"
                 app:layout_constraintTop_toBottomOf="@+id/profile_name_property" />
+
+            <ImageView
+                android:id="@+id/verified_image_property"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:src="@drawable/ic_verified"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_name_property"
+                app:layout_constraintStart_toEndOf="@+id/profile_name_property"
+                app:layout_constraintTop_toTopOf="@+id/profile_name_property" />
+
+
 
             <TextView
                 android:id="@+id/professional_percent_property"

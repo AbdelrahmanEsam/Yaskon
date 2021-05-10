@@ -12,16 +12,26 @@ import com.apptikar.yaskon.pojos.Demands
 import com.bumptech.glide.Glide
 import java.util.ArrayList
 
-class DemandsAdapter(var context: Context) : RecyclerView.Adapter<DemandsAdapter.ViewHolder>() {
+class DemandsAdapter(var context: Context,private val listener : OnCommentClicked) : RecyclerView.Adapter<DemandsAdapter.ViewHolder>() {
     var data: List<Demands> = ArrayList()
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+   inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),View.OnClickListener
     {
+        init {
+            itemView.setOnClickListener(this)
+        }
         var  customerImage : ImageView = itemView.findViewById(R.id.profile_image_comment)
         var  customerName : TextView = itemView.findViewById(R.id.commentNameTextView)
         var  duration : TextView = itemView.findViewById(R.id.customerDurationTextView)
         var  place : TextView = itemView.findViewById(R.id.commentPlaceTextView)
         var  demand : TextView = itemView.findViewById(R.id.commentTextView)
         var  numberOfComments : TextView = itemView.findViewById(R.id.numberOfComments)
+        override fun onClick(p0: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION)
+            {
+                listener.onCommentClicked(position)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -48,5 +58,10 @@ class DemandsAdapter(var context: Context) : RecyclerView.Adapter<DemandsAdapter
     fun setDataAdapter(data:List<Demands>) {
         this.data = data
         notifyDataSetChanged()
+    }
+
+    interface  OnCommentClicked{
+
+        fun onCommentClicked(position: Int)
     }
 }

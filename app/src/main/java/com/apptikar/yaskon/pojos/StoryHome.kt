@@ -2,4 +2,4 @@ package com.apptikar.yaskon.pojos
 
 import android.graphics.Bitmap
 
-data class StoryHome(val StoryName:String,val StoryImage: Bitmap)
+data class StoryHome(val StoryName:String,val StoryImage: Bitmap,var seen:Boolean=false)

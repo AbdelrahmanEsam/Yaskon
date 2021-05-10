@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_navigation"
+    app:startDestination="@id/cities">
+
+    <action
+        android:id="@+id/action_global_to_budget_range"
+        app:launchSingleTop="true"
+        app:destination="@id/budgetRange"
+        app:enterAnim="@anim/nav_default_pop_enter_anim"/>
+
+    <action
+        android:id="@+id/action_global_to_cities"
+        app:launchSingleTop="true"
+        app:destination="@id/cities"
+        app:enterAnim="@anim/nav_default_pop_enter_anim"
+        />
+
+
+
+    <fragment
+        android:id="@+id/budgetRange"
+        android:name="com.apptikar.yaskon.registration.BudgetRange"
+        android:label="fragment_budget_range"
+        tools:layout="@layout/fragment_budget_range" />
+    <fragment
+        android:id="@+id/cities"
+        android:name="com.apptikar.yaskon.registration.Cities"
+        android:label="Cities"
+        tools:layout="@layout/fragment_cities">
+    </fragment>
+</navigation>

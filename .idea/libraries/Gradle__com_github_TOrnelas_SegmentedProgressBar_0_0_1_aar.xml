@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.TOrnelas:SegmentedProgressBar:0.0.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffedd21c87976a6594411cf5d64f0848/jetified-SegmentedProgressBar-0.0.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffedd21c87976a6594411cf5d64f0848/jetified-SegmentedProgressBar-0.0.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffedd21c87976a6594411cf5d64f0848/jetified-SegmentedProgressBar-0.0.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.TOrnelas/SegmentedProgressBar/0.0.1/2bdd321197596450aa164f29be95074bbd26d4dd/SegmentedProgressBar-0.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

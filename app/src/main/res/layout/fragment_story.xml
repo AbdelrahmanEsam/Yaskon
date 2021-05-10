@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/storyBack"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Story"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <pt.tornelas.segmentedprogressbar.SegmentedProgressBar
+        android:id="@+id/storyProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp"
+        android:layout_margin="8dp"
+        android:elevation="@dimen/_5sdp"
+        app:layout_constraintEnd_toStartOf="@+id/storyImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:segmentBackgroundColor="@color/white"
+        app:segmentCornerRadius="10dp"
+        app:segmentMargins="@dimen/default_segment_margin"
+        app:segmentSelectedBackgroundColor="@color/orange_500"
+        app:timePerSegment="5000"/>
+
+    <View
+        android:id="@+id/leftView"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/profileImageStory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageStory" />
+
+    <View
+        android:id="@+id/rightView"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageStory" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImageStory"
+        android:transitionName="sekiro"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:elevation="20dp"
+        android:src="@drawable/cresu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storyProgressBar" />
+
+    <ImageView
+        android:id="@+id/storyImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/dummy_story"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="5dp"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/blurBack" />
+
+    <ImageView
+        android:id="@+id/blurBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_icons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/closeImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:elevation="5dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storyProgressBar" />
+
+    <TextView
+        android:id="@+id/profile_name_story"
+        android:layout_width="wrap_content"
+        android:transitionName="name"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/montserrat"
+        android:text="Elsayed Kamal"
+        android:textAlignment="center"
+        android:textColor="#242424"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="normal|bold"
+        app:layout_constraintStart_toEndOf="@+id/profileImageStory"
+        app:layout_constraintTop_toTopOf="@+id/profileImageStory" />
+
+    <TextView
+        android:id="@+id/broker_place_story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="Miami, Alex"
+        android:textColor="#71717A"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintStart_toStartOf="@+id/profile_name_story"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name_story" />
+
+    <TextView
+        android:id="@+id/story_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text=". 4 hrs"
+        android:textColor="#71717A"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_name_story"
+        app:layout_constraintStart_toEndOf="@+id/profile_name_story"
+        app:layout_constraintTop_toTopOf="@+id/profile_name_story" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/viewProfileButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/background_orange"
+        android:elevation="20dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/view_profile"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/viewAllAmenities"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/viewAllAmenities"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/call_story_background"
+        android:elevation="20dp"
+        android:src="@drawable/ic_callorange"
+        app:layout_constraintBottom_toBottomOf="@+id/viewProfileButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewProfileButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
