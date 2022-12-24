@@ -110,11 +110,11 @@ class SignUp : AppCompatActivity() {
                         Log.d("abdo",firstName)
                     }
                     override fun onCancel() {
-                        Log.d("abdo","a7a")
+                     
                     }
 
                     override fun onError(exception: FacebookException) {
-                        Log.d("abdo","a7a")
+                    
                     }
                 })
     }
